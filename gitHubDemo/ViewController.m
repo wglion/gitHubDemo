@@ -40,11 +40,9 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    if (self.view.subviews) {
-        
+
         [self.view addSubview:self.testView];
-        
-    }
+
     
     
 }
