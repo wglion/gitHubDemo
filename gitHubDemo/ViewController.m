@@ -10,10 +10,23 @@
 
 @interface ViewController ()
 
+@property (nonatomic , strong) UIView * testView;
+
+
 @end
 
 @implementation ViewController
 
+-(UIView *)testView{
+    
+    if (_testView ==nil) {
+        
+        _testView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        _testView.backgroundColor = [UIColor redColor];
+        
+    }
+    return _testView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -24,4 +37,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    if (self.view.subviews) {
+        
+        [self.view addSubview:self.testView];
+        
+    }
+    
+    
+}
 @end
