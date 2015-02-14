@@ -25,8 +25,14 @@
         _testView.backgroundColor = [UIColor redColor];
         
     }
+    
+    NSLog(@"ssdf sdf a");
+    
     return _testView;
 }
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
